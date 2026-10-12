@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gallery - SAFE HOUSE | Safe House Gaming Cafe</title>
+<meta name="description" content="Explore the gallery of SAFE HOUSE Gaming Cafe, Varanasi. See our PS5 zone, PC gaming stations, racing simulators, and tournament area.">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="animations.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+</head>
+<body>
+<div class="cursor" id="customCursor"></div>
+<div class="cursor-trail" id="customTrail"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar" style="transition:all .3s cubic-bezier(.4,0,.2,1)">
+<a href="index.html" class="nav-logo"><img src="images/safehouse-logo.png" alt="SAFE HOUSE" style="height:36px;width:auto;border-radius:8px"><span style="font-family:var(--font-display);font-size:1.35rem;font-weight:700;color:var(--text-primary);margin-left:10px">SAFE HOUSE</span></a>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="games.html">Games</a></li>
+<li><a href="gallery.html" class="active">Gallery</a></li>
+<li><a href="tournaments.html">Tournaments</a></li>
+<li><a href="pricing.html">Pricing</a></li>
+<li><a href="reviews.html">Reviews</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<button class="nav-cta" onclick="openBooking()">Book Now</button>
+<button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
+<span></span><span></span><span></span>
+</button>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+<div class="page-hero-bg"><img src="images/arcade-hero.png" alt="Arcade Zone Gaming"></div>
+<div class="page-hero-overlay"></div>
+<div class="container">
+<div class="page-hero-content animate-on-scroll">
+<div class="page-hero-badge"><span class="pulse"></span> Safe House Gaming Cafe</div>
+<h1>Step Inside Our <span class="highlight">Gaming Sanctuary</span></h1>
+<p>4th Floor, Safe House #3, Mahmoorganj, Varanasi — Where every corner is built for gamers</p>
+</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<span class="section-tag">Our Space</span>
+<h2 class="section-title">Safe House Gallery</h2>
+<p class="section-subtitle">Real photos of our premium gaming destination at Mahmoorganj, Varanasi</p>
+</div>
+<div class="gallery-grid">
+<div class="gallery-item main animate-on-scroll">
+<img src="images/arcade-hero.png" alt="Safe House Gaming Cafe Main Hall" style="width:100%;height:100%;object-fit:cover;border-radius:16px">
+<div class="gallery-overlay"><span>Main Gaming Hall — 4th Floor, Safe House #3</span></div>
+</div>
+<div class="gallery-item animate-on-scroll">
+<img src="images/ps5-setup.png" alt="PS5 Gaming Setup" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:16px">
+<div class="gallery-overlay"><span>PS5 Zone — DualSense, 4K HDR, 120Hz</span></div>
+</div>
+<div class="gallery-item animate-on-scroll">
+<img src="images/ps4-setup.png" alt="PS4 Gaming Setup" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:16px">
+<div class="gallery-overlay"><span>PS4 Zone — Classic Gaming Comfort</span></div>
+</div>
+<div class="gallery-item animate-on-scroll">
+<img src="images/driving-simulator.png" alt="Racing Simulator Setup" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:16px">
+<div class="gallery-overlay"><span>Pro Racing Sim — Triple Screen, Direct Drive</span></div>
+</div>
+<div class="gallery-item animate-on-scroll">
+<div class="gallery-placeholder" style="background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:var(--neon-green);padding:30px;text-align:center;border-radius:16px">
+<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:12px"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+<h3 style="margin:0 0 8px">PC Gaming Zone</h3>
+<p style="margin:0;color:var(--text-muted)">RTX 4080/4090 • 240Hz • 4 Stations</p>
+</div>
+</div>
+<div class="gallery-item animate-on-scroll">
+<div class="gallery-placeholder" style="background:linear-gradient(135deg,#0f0f23,#1a1a2e);display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#ff6b35;padding:30px;text-align:center;border-radius:16px">
+<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:12px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+<h3 style="margin:0 0 8px">Tournament Stage</h3>
+<p style="margin:0;color:var(--text-muted)">Weekly Events • 50+ Seat Spectator Area</p>
+</div>
+</div>
+<div class="gallery-item animate-on-scroll">
+<div class="gallery-placeholder" style="background:linear-gradient(135deg,#1a1a2e,#0d1b2a);display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#00d4aa;padding:30px;text-align:center;border-radius:16px">
+<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:12px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+<h3 style="margin:0 0 8px">Chill & Snacks Zone</h3>
+<p style="margin:0;color:var(--text-muted)">Loaded Fries • Peri-Peri Wings • Cold Coffee</p>
+</div>
+</div>
+<div class="gallery-item animate-on-scroll">
+<div class="gallery-placeholder" style="background:linear-gradient(135deg,#0d1b2a,#1a1a2e);display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#a855f7;padding:30px;text-align:center;border-radius:16px">
+<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:12px"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+<h3 style="margin:0 0 8px">VIP Private Booths</h3>
+<p style="margin:0;color:var(--text-muted)">Soundproof • Dedicated AC • Premium Gear</p>
+</div>
+</div>
+<div class="gallery-item animate-on-scroll">
+<div class="gallery-placeholder" style="background:linear-gradient(135deg,#1a1a2e,#0f0f23);display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#f43f5e;padding:30px;text-align:center;border-radius:16px">
+<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:12px"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><polyline points="17 11 12 6 7 11"/></svg>
+<h3 style="margin:0 0 8px">Community Corner</h3>
+<p style="margin:0;color:var(--text-muted)">Leaderboards • Tournament Brackets • Wall of Fame</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- VIRTUAL TOUR CTA -->
+<section class="booking-cta-section" style="background:var(--bg-card)">
+<div class="container" style="text-align:center;padding:80px 24px">
+<div class="section-header animate-on-scroll">
+<span class="section-tag">Visit Us</span>
+<h2 class="section-title">Experience It Yourself</h2>
+<p class="section-subtitle">Photos don't do justice to the 4K visuals, force feedback wheel, and that new-gear smell</p>
+</div>
+<div class="booking-cta-buttons animate-on-scroll" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+<a href="contact.html" class="btn-primary" style="font-size:1.1rem;padding:16px 40px">📍 Get Directions</a>
+<button class="btn-secondary" onclick="openBooking('ps5')" style="font-size:1.1rem;padding:16px 40px">🎮 Book a Session</button>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<h3>🎮 ARCADE ZONE</h3>
+<p>Varanasi's premium gaming destination. PS5, PS4 & racing simulators in a next-level atmosphere.</p>
+</div>
+<div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="games.html">Games</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="tournaments.html">Tournaments</a></li></ul></div>
+<div class="footer-col"><h4>Gaming</h4><ul><li><a href="#" onclick="openBooking('ps5')">Book PS5</a></li><li><a href="#" onclick="openBooking('pc')">Book PC</a></li><li><a href="#" onclick="openBooking('sim')">Book Simulator</a></li></ul></div>
+<div class="footer-col"><h4>Contact</h4><ul><li><a href="https://wa.me/919005562077" target="_blank">WhatsApp Us</a></li><li><a href="tel:+919005562077">Call Us</a></li><li><a href="contact.html">Find Us</a></li></ul></div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 Arcade Zone, Varanasi. All rights reserved.</p>
+<div class="social-links">
+<a href="https://wa.me/919005562077" class="social-link" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.528 5.867L.06 23.495l5.753-1.508A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82a9.78 9.78 0 0 1-5.445-1.472l-.39-.232-3.416.895.911-3.332-.255-.404A9.784 9.784 0 0 1 2.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z"/></svg></a>
+<a href="https://instagram.com/safehouse.gg" class="social-link" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- BOOKING MODAL -->
+<div class="booking-overlay" id="bookingOverlay">
+<div class="booking-modal">
+<div class="booking-header"><h2>Book Your Session</h2><button class="booking-close" onclick="closeBooking()" aria-label="Close">&times;</button></div>
+<div class="booking-steps"><div class="step-indicator active" id="step1ind"></div><div class="step-indicator" id="step2ind"></div><div class="step-indicator" id="step3ind"></div><div class="step-indicator" id="step4ind"></div><div class="step-indicator" id="step5ind"></div></div>
+<div class="booking-body">
+<div class="booking-step active" id="bookStep1">
+<h3 style="margin-bottom:16px;font-family:var(--font-body);font-weight:600">Select Package</h3>
+<div class="package-options">
+<label class="package-option" onclick="selectPackage(this,'PlayStation 5',150,'ps5')"><input type="radio" name="package" value="ps5"><div class="package-radio"></div><div class="package-info"><h4>PlayStation 5</h4><p>Next-gen console</p></div><div class="package-price">₹150/hr</div></label>
+<label class="package-option" onclick="selectPackage(this,'PlayStation 4',80,'ps4')"><input type="radio" name="package" value="ps4"><div class="package-radio"></div><div class="package-info"><h4>PlayStation 4</h4><p>Classic gaming</p></div><div class="package-price">₹80/hr</div></label>
+<label class="package-option" onclick="selectPackage(this,'Driving Simulator',150,'sim')"><input type="radio" name="package" value="sim"><div class="package-radio"></div><div class="package-info"><h4>Driving Simulator</h4><p>Racing thrills</p></div><div class="package-price">₹150/30m</div></label>
+<label class="package-option" onclick="selectPackage(this,'PC Gaming Station',120,'pc')"><input type="radio" name="package" value="pc"><div class="package-radio"></div><div class="package-info"><h4>PC Gaming Station</h4><p>RTX 4080/4090 • 240Hz</p></div><div class="package-price">₹120/hr</div></label>
+</div>
+<div class="booking-nav"><button class="btn-primary" onclick="nextStep(2)" style="width:100%;justify-content:center">Next →</button></div>
+</div>
+<div class="booking-step" id="bookStep2">
+<h3 style="margin-bottom:16px;font-family:var(--font-body);font-weight:600">Date & Time</h3>
+<div class="form-group"><label for="bookDate">Select Date *</label><input type="date" id="bookDate" required></div>
+<div class="slot-status" id="slotStatus"></div>
+<div class="form-row">
+<div class="form-group"><label for="bookTime">Time Slot *</label><select id="bookTime"><option value="">Choose a time</option><option value="10:00 AM">10:00 AM</option><option value="11:00 AM">11:00 AM</option><option value="12:00 PM">12:00 PM</option><option value="1:00 PM">1:00 PM</option><option value="2:00 PM">2:00 PM</option><option value="3:00 PM">3:00 PM</option><option value="4:00 PM">4:00 PM</option><option value="5:00 PM">5:00 PM</option><option value="6:00 PM">6:00 PM</option><option value="7:00 PM">7:00 PM</option><option value="8:00 PM">8:00 PM</option><option value="9:00 PM">9:00 PM</option><option value="10:00 PM">10:00 PM</option></select></div>
+<div class="form-group"><label for="bookDuration">Duration *</label><select id="bookDuration"><option value="1">1 Hour</option><option value="2">2 Hours</option><option value="3">3 Hours</option><option value="4">4 Hours</option></select></div>
+</div>
+<div class="form-group"><label for="bookPlayers">Number of Players *</label><select id="bookPlayers"><option value="1">1 Player</option><option value="2">2 Players</option><option value="3">3 Players</option><option value="4">4 Players</option></select></div>
+<div class="booking-nav"><button class="btn-secondary" onclick="prevStep(1)">← Back</button><button class="btn-primary" onclick="nextStep(3)">Next →</button></div>
+</div>
+<div class="booking-step" id="bookStep3">
+<h3 style="margin-bottom:16px;font-family:var(--font-body);font-weight:600">Your Details</h3>
+<div class="form-group"><label for="bookName">Full Name *</label><input type="text" inputmode="text" autocomplete="name" id="bookName" placeholder="Enter your name" required></div>
+<div class="form-row">
+<div class="form-group"><label for="bookPhone">Phone *</label><input type="tel" inputmode="tel" id="bookPhone" placeholder="+91" required></div>
+<div class="form-group"><label for="bookEmail">Email</label><input type="email" inputmode="email" id="bookEmail" placeholder="Optional"></div>
+</div>
+<div class="form-group"><label for="bookNotes">Special Requests</label><input type="text" id="bookNotes" placeholder="Birthday party, group event, etc."></div>
+<div class="booking-nav"><button class="btn-secondary" onclick="prevStep(2)">← Back</button><button class="btn-primary" onclick="nextStep(4)">Next →</button></div>
+</div>
+<div class="booking-step" id="bookStep4">
+<h3 style="margin-bottom:16px;font-family:var(--font-body);font-weight:600">Payment</h3>
+<div class="payment-info" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:12px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;color:var(--neon-green)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="11" x2="12" y2="16"/><line x1="8" y1="16" x2="16" y2="16"/></svg><span style="font-weight:600;font-size:1.1rem">Payment Details</span></div>
+<div style="margin-bottom:12px"><strong>UPI ID:</strong> <code id="upiId" style="background:var(--bg);padding:4px 8px;border-radius:4px;font-family:monospace">arcadezone@upi</code> <button class="btn-secondary" onclick="copyUPI()" style="font-size:0.75rem;padding:4px 10px;margin-left:8px">Copy</button></div>
+<div style="margin-bottom:12px"><strong>Amount to Pay:</strong> <span id="paymentAmount" style="color:var(--neon-green);font-weight:700;font-size:1rem">₹0</span></div>
+<p style="color:var(--text-muted);font-size:0.85rem;margin:0">After payment, upload a screenshot of the transaction below.</p>
+</div>
+<div class="form-group">
+<label for="paymentScreenshot">Payment Screenshot *</label>
+<input type="file" id="paymentScreenshot" accept=".jpg,.jpeg,.png" required>
+<p class="file-hint" style="color:var(--text-muted);font-size:0.8rem;margin-top:6px">Accepted: JPG, JPEG, PNG (max 5MB)</p>
+</div>
+<div class="file-preview" id="screenshotPreview" style="display:none;margin-top:12px"></div>
+<div class="booking-nav"><button class="btn-secondary" onclick="prevStep(3)">← Back</button><button class="btn-primary" onclick="nextStep(5)" id="paymentNextBtn" disabled>Review Booking →</button></div>
+</div>
+<div class="booking-step" id="bookStep5">
+<h3 style="margin-bottom:16px;font-family:var(--font-body);font-weight:600">Booking Summary</h3>
+<div class="booking-summary" id="bookingSummary"></div>
+<div class="booking-nav" style="margin-top:20px"><button class="btn-secondary" onclick="prevStep(4)">← Back</button><button class="btn-primary" onclick="submitBooking()" style="background:linear-gradient(135deg,#25D366,#128C7E)">📱 Confirm & Send via WhatsApp</button></div>
+</div>
+<div class="booking-step" id="bookStepSuccess">
+<div class="booking-success">
+<div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+<h3>Booking Confirmed!</h3>
+<p>Your booking details have been sent to Arcade Zone via WhatsApp.</p>
+<p style="color:var(--neon-green);font-weight:600;margin-top:12px">The owner will confirm your slot shortly!</p>
+<button class="btn-primary" onclick="closeBooking()" style="margin-top:24px">Done ✓</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919005562077?text=Hi!%20I'd%20like%20to%20book%20a%20gaming%20session%20at%20Arcade%20Zone." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.528 5.867L.06 23.495l5.753-1.508A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82a9.78 9.78 0 0 1-5.445-1.472l-.39-.232-3.416.895.911-3.332-.255-.404A9.784 9.784 0 0 1 2.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z"/></svg>
+</a>
+
+<script src="app.js"></script>
+<script src="animations.js"></script>
+</body>
+</html>

@@ -8,7 +8,8 @@
 var INVENTORY = {
   'PlayStation 5': 2,
   'PlayStation 4': 1,
-  'Driving Simulator': 2
+  'Driving Simulator': 2,
+  'PC Gaming Station': 4
 };
 
 var timeSlots = [
@@ -17,11 +18,71 @@ var timeSlots = [
   '8:00 PM','9:00 PM','10:00 PM'
 ];
 
+// Screenshot folder name in Google Drive
+var SCREENSHOT_FOLDER_NAME = 'Arcade Zone Payment Screenshots';
+
 // ---------- CORS helper ----------
 function jsonResponse(data) {
   return ContentService
     .createTextOutput(JSON.stringify(data))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+// ---------- SCREENSHOT HELPERS ----------
+function getScreenshotFolder() {
+  var props = PropertiesService.getScriptProperties();
+  var folderId = props.getProperty('SCREENSHOT_FOLDER_ID');
+  
+  if (folderId) {
+    try {
+      var folder = DriveApp.getFolderById(folderId);
+      return folder;
+    } catch (e) {
+      // Folder was deleted, create new one
+    }
+  }
+  
+  // Create new folder
+  var folders = DriveApp.getFoldersByName(SCREENSHOT_FOLDER_NAME);
+  var folder;
+  if (folders.hasNext()) {
+    folder = folders.next();
+  } else {
+    folder = DriveApp.createFolder(SCREENSHOT_FOLDER_NAME);
+  }
+  
+  // Save folder ID for reuse
+  props.setProperty('SCREENSHOT_FOLDER_ID', folder.getId());
+  return folder;
+}
+
+function saveScreenshot(base64Data, fileName) {
+  if (!base64Data || !fileName) return '';
+  
+  try {
+    var folder = getScreenshotFolder();
+    
+    // Decode base64
+    var blob = Utilities.newBlob(Utilities.base64Decode(base64Data), 'image/png', fileName);
+    
+    // Detect MIME type from filename
+    var ext = fileName.split('.').pop().toLowerCase();
+    var mimeType = 'image/png';
+    if (ext === 'jpg' || ext === 'jpeg') mimeType = 'image/jpeg';
+    blob.setContentType(mimeType);
+    
+    // Save file
+    var file = folder.createFile(blob);
+    
+    // Set sharing to "Anyone with the link can view"
+    file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+    
+    // Return shareable URL
+    return file.getUrl();
+  } catch (err) {
+    Logger.log('Screenshot save error: ' + err.message);
+    return '';
+  }
 }
 
 // ---------- GET handler ----------
@@ -81,8 +142,8 @@ function getSlots(date, consoleName) {
     var rowPlayers = parseInt(row[8]) || 1; // Column I: Players
     var rowStatus = String(row[10]).trim(); // Column K: Status
 
-    // Skip cancelled bookings
-    if (rowStatus === 'Cancelled') continue;
+    // Skip cancelled OR rejected bookings
+    if (rowStatus === 'Cancelled' || rowStatus === 'Rejected') continue;
 
     // Format date safely
     var dateStr = '';
@@ -207,6 +268,12 @@ function createBooking(data) {
   // Generate booking ID
   var bookingId = 'AZ-' + new Date().getTime().toString(36).toUpperCase();
 
+  // Save screenshot to Google Drive if provided
+  var screenshotUrl = '';
+  if (data.screenshotBase64 && data.screenshotFilename) {
+    screenshotUrl = saveScreenshot(data.screenshotBase64, data.screenshotFilename);
+  }
+
   // Append to sheet
   var sheet = getBookingsSheet();
   
@@ -225,7 +292,8 @@ function createBooking(data) {
     data.notes || '',         // J: Notes
     'Confirmed',              // K: Status
     bookingId,                // L: Booking ID
-    data.totalPrice || 0      // M: Total Price
+    data.totalPrice || 0,     // M: Total Price
+    screenshotUrl             // N: Payment Screenshot
   ]);
 
   return {
@@ -246,10 +314,10 @@ function getBookingsSheet() {
     sheet.appendRow([
       'Timestamp', 'Name', 'Phone', 'Email', 'Console',
       'Date', 'Time', 'Duration', 'Players', 'Notes',
-      'Status', 'Booking ID', 'Total Price'
+      'Status', 'Booking ID', 'Total Price', 'Payment Screenshot'
     ]);
     // Style header
-    sheet.getRange('A1:M1').setFontWeight('bold').setBackground('#4a148c').setFontColor('#ffffff');
+    sheet.getRange('A1:N1').setFontWeight('bold').setBackground('#4a148c').setFontColor('#ffffff');
     sheet.setFrozenRows(1);
     // Set column widths
     sheet.setColumnWidth(1, 160);
@@ -257,6 +325,7 @@ function getBookingsSheet() {
     sheet.setColumnWidth(6, 120);
     sheet.setColumnWidth(11, 100);
     sheet.setColumnWidth(12, 130);
+    sheet.setColumnWidth(14, 250); // Payment Screenshot column
   }
 
   return sheet;

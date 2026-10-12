@@ -234,7 +234,7 @@ if (heroBadgeText) {
       if (pulse) heroBadgeText.appendChild(pulse);
       const span = document.createElement('span');
       heroBadgeText.appendChild(span);
-      typeWriter(span, ' Now Open in Agra', 60);
+      typeWriter(span, ' Now Open in Varanasi', 60);
       observer.disconnect();
     }
   });

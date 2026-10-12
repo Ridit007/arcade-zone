@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reviews - Arcade Zone | Safe House Gaming Cafe</title>
+<meta name="description" content="Read what gamers say about Arcade Zone at Safe House, Varanasi. Real reviews from our community - PS5, PC, Racing Sim, tournaments, and more.">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="animations.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+</head>
+<body>
+<div class="cursor" id="customCursor"></div>
+<div class="cursor-trail" id="customTrail"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar" style="transition:all .3s cubic-bezier(.4,0,.2,1)">
+<a href="index.html" class="nav-logo"><div class="logo-icon">🎮</div>ARCADE ZONE</a>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="games.html">Games</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="tournaments.html">Tournaments</a></li>
+<li><a href="pricing.html">Pricing</a></li>
+<li><a href="reviews.html" class="active">Reviews</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<button class="nav-cta" onclick="openBooking()">Book Now</button>
+<button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
+<span></span><span></span><span></span>
+</button>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+<div class="page-hero-bg"><img src="images/arcade-hero.png" alt="Arcade Zone Gaming"></div>
+<div class="page-hero-overlay"></div>
+<div class="container">
+<div class="page-hero-content animate-on-scroll">
+<div class="page-hero-badge"><span class="pulse"></span> Community Voice</div>
+<h1>What Our <span class="highlight">Gamers Say</span></h1>
+<p>Real feedback from 2000+ gamers who've experienced Safe House Gaming Cafe at Mahmoorganj, Varanasi</p>
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="games-section">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<span class="section-tag">Testimonials</span>
+<h2 class="section-title">Player Reviews</h2>
+<p class="section-subtitle">Honest opinions from casual players, tournament champions, and regulars</p>
+</div>
+<div class="testimonials-grid">
+<div class="testimonial-card animate-on-scroll">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">"Best gaming lounge in Varanasi! The PS5 setup is insane and the racing simulator feels so real. Me and my friends come here every weekend."</p>
+<div class="testimonial-author"><div class="testimonial-avatar">R</div><div class="testimonial-info"><h4>Rahul Sharma</h4><span>Regular Gamer • 15+ Visits</span></div></div>
+</div>
+<div class="testimonial-card animate-on-scroll">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">"Had my son's birthday party here. The kids absolutely loved it! Great ambiance, friendly staff, and super affordable pricing."</p>
+<div class="testimonial-author"><div class="testimonial-avatar">P</div><div class="testimonial-info"><h4>Priya Gupta</h4><span>Parent • Birthday Party Host</span></div></div>
+</div>
+<div class="testimonial-card animate-on-scroll">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">"The driving simulator is next level! Premium setup, clean environment, and the booking via WhatsApp is super convenient."</p>
+<div class="testimonial-author"><div class="testimonial-avatar">A</div><div class="testimonial-info"><h4>Amit Verma</h4><span>Sim Racing Fan • Monthly Regular</span></div></div>
+</div>
+<div class="testimonial-card animate-on-scroll">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">"Won the Valorant tournament last month! The PC rigs are top-tier — RTX 4090, 240Hz monitors, zero lag. Best competitive setup in town."</p>
+<div class="testimonial-author"><div class="testimonial-avatar">V</div><div class="testimonial-info"><h4>Viper_23</h4><span>Tournament Champion • Jan 2024</span></div></div>
+</div>
+<div class="testimonial-card animate-on-scroll">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">"Forza Horizon 5 on the triple-screen sim rig is unreal. Force feedback wheel, proper pedals, 4K visuals. Worth every rupee!"</p>
+<div class="testimonial-author"><div class="testimonial-avatar">S</div><div class="testimonial-info"><h4>Speed_Demon</h4><span>Racing Enthusiast • Forza Champ</span></div></div>
+</div>
+<div class="testimonial-card animate-on-scroll">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">"Great vibe for casual gaming too. Played FIFA with friends on PS5, ordered snacks to the station. Staff is super helpful and chill."</p>
+<div class="testimonial-author"><div class="testimonial-avatar">K</div><div class="testimonial-info"><h4>Karan Patel</h4><span>Weekend Gamer • Group Regular</span></div></div>
+</div>
+<div class="testimonial-card animate-on-scroll">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">"PC stations are a beast — played CS2 at 500+ FPS, zero input lag. Mechanical keyboards, lightweight mice, perfect for competitive practice."</p>
+<div class="testimonial-author"><div class="testimonial-avatar">C</div><div class="testimonial-info"><h4>CS_GOD_99</h4><span>CS2 Player • Tournament Runner-up</span></div></div>
+</div>
+<div class="testimonial-card animate-on-scroll">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">"Best value for money in Varanasi. ₹120/hr for RTX 4090 rig? Insane. Staff remembers your preferences, snacks delivered to station."</p>
+<div class="testimonial-author"><div class="testimonial-avatar">N</div><div class="testimonial-info"><h4>Neha Singh</h4><span>College Student • Daily Grinder</span></div></div>
+</div>
+<div class="testimonial-card animate-on-scroll">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">"Hosted our college LAN party here. 20 people, zero issues. Tournament bracket management, live scoring, great streaming setup for spectators."</p>
+<div class="testimonial-author"><div class="testimonial-avatar">D</div><div class="testimonial-info"><h4>Devansh M.</h4><span>Event Organizer • College Fest</span></div></div>
+</div>
+</div>
+
+<!-- RATING SUMMARY -->
+<div class="rating-summary animate-on-scroll" style="margin-top:60px;text-align:center">
+<div class="rating-main" style="display:inline-flex;align-items:center;gap:40px;background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:40px 60px">
+<div class="rating-score" style="text-align:center">
+<div style="font-size:5rem;font-weight:800;color:var(--neon-green);font-family:var(--font-display);line-height:1">4.9</div>
+<div style="color:var(--text-muted);margin-top:8px">out of 5.0</div>
+</div>
+<div class="rating-stars" style="font-size:2.5rem;color:#FBBF24;letter-spacing:4px">★★★★★</div>
+<div class="rating-breakdown" style="text-align:left;min-width:200px">
+<div style="display:flex;align-items:center;gap:12px;margin:8px 0"><div style="width:60px;font-size:0.85rem;color:var(--text-muted)">5 ★</div><div style="flex:1;height:8px;background:var(--border);border-radius:4px;overflow:hidden"><div style="width:92%;height:100%;background:var(--neon-green);border-radius:4px"></div></div><div style="width:40px;font-size:0.8rem;color:var(--text-muted)">92%</div></div>
+<div style="display:flex;align-items:center;gap:12px;margin:8px 0"><div style="width:60px;font-size:0.85rem;color:var(--text-muted)">4 ★</div><div style="flex:1;height:8px;background:var(--border);border-radius:4px;overflow:hidden"><div style="width:6%;height:100%;background:#f43f5e;border-radius:4px"></div></div><div style="width:40px;font-size:0.8rem;color:var(--text-muted)">6%</div></div>
+<div style="display:flex;align-items:center;gap:12px;margin:8px 0"><div style="width:60px;font-size:0.85rem;color:var(--text-muted)">3 ★</div><div style="flex:1;height:8px;background:var(--border);border-radius:4px;overflow:hidden"><div style="width:2%;height:100%;background:#ff6b35;border-radius:4px"></div></div><div style="width:40px;font-size:0.8rem;color:var(--text-muted)">2%</div></div>
+</div>
+<div class="rating-count" style="text-align:center;border-left:1px solid var(--border);padding-left:40px">
+<div style="font-size:2rem;font-weight:700;color:var(--secondary);font-family:var(--font-display)">1,247</div>
+<div style="color:var(--text-muted);font-size:0.9rem">Verified Reviews</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- INSTAGRAM FEED -->
+<section class="games-section" style="background:var(--bg-card)">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<span class="section-tag" style="background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);-webkit-background-clip:text;-webkit-text-fill-color:transparent">@safehouse.gg</span>
+<h2 class="section-title">Instagram Highlights</h2>
+<p class="section-subtitle">Live updates, tournament clips, setup showcases & community moments</p>
+</div>
+<div class="insta-grid">
+<div class="insta-post animate-on-scroll">
+<div class="insta-image" style="background:linear-gradient(135deg,#667eea,#764ba2);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem">🏆</div>
+<div class="insta-caption">
+<p><strong>Valorant Clash Finals</strong> — What a weekend! Congrats to team VIPER_23 for the clean sweep 🔥</p>
+<span class="insta-meta">2.3k likes • 3 days ago</span>
+</div>
+</div>
+<div class="insta-post animate-on-scroll">
+<div class="insta-image" style="background:linear-gradient(135deg,#f093fb,#f5576c);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem">🏎️</div>
+<div class="insta-caption">
+<p><strong>New Sim Rig Alert</strong> — Triple 32" 4K screens, direct drive wheel, load cell pedals. Forza never felt this real 😱</p>
+<span class="insta-meta">1.8k likes • 1 week ago</span>
+</div>
+</div>
+<div class="insta-post animate-on-scroll">
+<div class="insta-image" style="background:linear-gradient(135deg,#4facfe,#00f2fe);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem">⚽</div>
+<div class="insta-caption">
+<p><strong>FC 24 Friday Nights</strong> — Every week, 16 players, 1 champion. This week's winner: FC_KING_VNS 👑</p>
+<span class="insta-meta">1.5k likes • 2 weeks ago</span>
+</div>
+</div>
+<div class="insta-post animate-on-scroll">
+<div class="insta-image" style="background:linear-gradient(135deg,#fa709a,#fee140);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem">🎮</div>
+<div class="insta-caption">
+<p><strong>PC Zone Upgrade</strong> — RTX 4090s across all stations. Valorant at 500+ FPS, CS2 buttery smooth. Come test them 🎯</p>
+<span class="insta-meta">3.1k likes • 3 weeks ago</span>
+</div>
+</div>
+<div class="insta-post animate-on-scroll">
+<div class="insta-image" style="background:linear-gradient(135deg,#a8edea,#fed6e3);display:flex;align-items:center;justify-content:center;color:#333;font-size:3rem">🍕</div>
+<div class="insta-caption">
+<p><strong>Gaming + Food = Perfect</strong> — New snack menu dropped. Loaded fries, peri-peri wings, cold coffee. Fuel your sessions right 🍟</p>
+<span class="insta-meta">980 likes • 1 month ago</span>
+</div>
+</div>
+<div class="insta-post animate-on-scroll">
+<div class="insta-image" style="background:linear-gradient(135deg,#ff9a9e,#fad0c4);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem">📸</div>
+<div class="insta-caption">
+<p><strong>Community Vibes</strong> — Birthday squads, college groups, solo grinders. Every face tells a story. Tag us @safehouse.gg 📍</p>
+<span class="insta-meta">2.7k likes • 1 month ago</span>
+</div>
+</div>
+</div>
+<div style="text-align:center;margin-top:30px">
+<a href="https://instagram.com/safehouse.gg" target="_blank" class="btn-secondary" style="display:inline-flex;align-items:center;gap:8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg> Follow @safehouse.gg on Instagram</a>
+</div>
+</div>
+</section>
+
+<!-- LEAVE REVIEW CTA -->
+<section class="booking-cta-section" style="background:var(--bg-card)">
+<div class="container" style="text-align:center;padding:80px 24px">
+<div class="section-header animate-on-scroll">
+<span class="section-tag">Your Turn</span>
+<h2 class="section-title">Share Your Experience</h2>
+<p class="section-subtitle">Help fellow gamers discover Safe House. Leave a review on Google or tag us on Instagram!</p>
+</div>
+<div class="booking-cta-buttons animate-on-scroll" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+<a href="https://www.google.com/maps/place/SAFE+HOUSE/@25.3200,82.9900,17z/data=!4m8!3m7!1s0x398e33229b5318eb:0xd83e3315d8bd51e0!8m2!3d25.3200!4d82.9900!9m1!1b1!16s%2Fg%2F11c5x5v5k5?entry=ttu" target="_blank" class="btn-primary" style="font-size:1.1rem;padding:16px 40px">⭐ Review on Google Maps</a>
+<a href="https://instagram.com/safehouse.gg" target="_blank" class="btn-secondary" style="font-size:1.1rem;padding:16px 40px">📸 Tag @safehouse.gg</a>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<h3>🎮 ARCADE ZONE</h3>
+<p>Varanasi's premium gaming destination. PS5, PS4 & racing simulators in a next-level atmosphere.</p>
+</div>
+<div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="games.html">Games</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="tournaments.html">Tournaments</a></li></ul></div>
+<div class="footer-col"><h4>Gaming</h4><ul><li><a href="#" onclick="openBooking('ps5')">Book PS5</a></li><li><a href="#" onclick="openBooking('pc')">Book PC</a></li><li><a href="#" onclick="openBooking('sim')">Book Simulator</a></li></ul></div>
+<div class="footer-col"><h4>Contact</h4><ul><li><a href="https://wa.me/919005562077" target="_blank">WhatsApp Us</a></li><li><a href="tel:+919005562077">Call Us</a></li><li><a href="contact.html">Find Us</a></li></ul></div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 Arcade Zone, Varanasi. All rights reserved.</p>
+<div class="social-links">
+<a href="https://wa.me/919005562077" class="social-link" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.528 5.867L.06 23.495l5.753-1.508A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82a9.78 9.78 0 0 1-5.445-1.472l-.39-.232-3.416.895.911-3.332-.255-.404A9.784 9.784 0 0 1 2.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z"/></svg></a>
+<a href="https://instagram.com/safehouse.gg" class="social-link" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- BOOKING MODAL -->
+<div class="booking-overlay" id="bookingOverlay">
+<div class="booking-modal">
+<div class="booking-header"><h2>Book Your Session</h2><button class="booking-close" onclick="closeBooking()" aria-label="Close">&times;</button></div>
+<div class="booking-steps"><div class="step-indicator active" id="step1ind"></div><div class="step-indicator" id="step2ind"></div><div class="step-indicator" id="step3ind"></div><div class="step-indicator" id="step4ind"></div><div class="step-indicator" id="step5ind"></div></div>
+<div class="booking-body">
+<div class="booking-step active" id="bookStep1">
+<h3 style="margin-bottom:16px;font-family:var(--font-body);font-weight:600">Select Package</h3>
+<div class="package-options">
+<label class="package-option" onclick="selectPackage(this,'PlayStation 5',150,'ps5')"><input type="radio" name="package" value="ps5"><div class="package-radio"></div><div class="package-info"><h4>PlayStation 5</h4><p>Next-gen console</p></div><div class="package-price">₹150/hr</div></label>
+<label class="package-option" onclick="selectPackage(this,'PlayStation 4',80,'ps4')"><input type="radio" name="package" value="ps4"><div class="package-radio"></div><div class="package-info"><h4>PlayStation 4</h4><p>Classic gaming</p></div><div class="package-price">₹80/hr</div></label>
+<label class="package-option" onclick="selectPackage(this,'Driving Simulator',150,'sim')"><input type="radio" name="package" value="sim"><div class="package-radio"></div><div class="package-info"><h4>Driving Simulator</h4><p>Racing thrills</p></div><div class="package-price">₹150/30m</div></label>
+<label class="package-option" onclick="selectPackage(this,'PC Gaming Station',120,'pc')"><input type="radio" name="package" value="pc"><div class="package-radio"></div><div class="package-info"><h4>PC Gaming Station</h4><p>RTX 4080/4090 • 240Hz</p></div><div class="package-price">₹120/hr</div></label>
+</div>
+<div class="booking-nav"><button class="btn-primary" onclick="nextStep(2)" style="width:100%;justify-content:center">Next →</button></div>
+</div>
+<div class="booking-step" id="bookStep2">
+<h3 style="margin-bottom:16px;font-family:var(--font-body);font-weight:600">Date & Time</h3>
+<div class="form-group"><label for="bookDate">Select Date *</label><input type="date" id="bookDate" required></div>
+<div class="slot-status" id="slotStatus"></div>
+<div class="form-row">
+<div class="form-group"><label for="bookTime">Time Slot *</label><select id="bookTime"><option value="">Choose a time</option><option value="10:00 AM">10:00 AM</option><option value="11:00 AM">11:00 AM</option><option value="12:00 PM">12:00 PM</option><option value="1:00 PM">1:00 PM</option><option value="2:00 PM">2:00 PM</option><option value="3:00 PM">3:00 PM</option><option value="4:00 PM">4:00 PM</option><option value="5:00 PM">5:00 PM</option><option value="6:00 PM">6:00 PM</option><option value="7:00 PM">7:00 PM</option><option value="8:00 PM">8:00 PM</option><option value="9:00 PM">9:00 PM</option><option value="10:00 PM">10:00 PM</option></select></div>
+<div class="form-group"><label for="bookDuration">Duration *</label><select id="bookDuration"><option value="1">1 Hour</option><option value="2">2 Hours</option><option value="3">3 Hours</option><option value="4">4 Hours</option></select></div>
+</div>
+<div class="form-group"><label for="bookPlayers">Number of Players *</label><select id="bookPlayers"><option value="1">1 Player</option><option value="2">2 Players</option><option value="3">3 Players</option><option value="4">4 Players</option></select></div>
+<div class="booking-nav"><button class="btn-secondary" onclick="prevStep(1)">← Back</button><button class="btn-primary" onclick="nextStep(3)">Next →</button></div>
+</div>
+<div class="booking-step" id="bookStep3">
+<h3 style="margin-bottom:16px;font-family:var(--font-body);font-weight:600">Your Details</h3>
+<div class="form-group"><label for="bookName">Full Name *</label><input type="text" inputmode="text" autocomplete="name" id="bookName" placeholder="Enter your name" required></div>
+<div class="form-row">
+<div class="form-group"><label for="bookPhone">Phone *</label><input type="tel" inputmode="tel" id="bookPhone" placeholder="+91" required></div>
+<div class="form-group"><label for="bookEmail">Email</label><input type="email" inputmode="email" id="bookEmail" placeholder="Optional"></div>
+</div>
+<div class="form-group"><label for="bookNotes">Special Requests</label><input type="text" id="bookNotes" placeholder="Birthday party, group event, etc."></div>
+<div class="booking-nav"><button class="btn-secondary" onclick="prevStep(2)">← Back</button><button class="btn-primary" onclick="nextStep(4)">Next →</button></div>
+</div>
+<div class="booking-step" id="bookStep4">
+<h3 style="margin-bottom:16px;font-family:var(--font-body);font-weight:600">Payment</h3>
+<div class="payment-info" style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:12px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;color:var(--neon-green)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="11" x2="12" y2="16"/><line x1="8" y1="16" x2="16" y2="16"/></svg><span style="font-weight:600;font-size:1.1rem">Payment Details</span></div>
+<div style="margin-bottom:12px"><strong>UPI ID:</strong> <code id="upiId" style="background:var(--bg);padding:4px 8px;border-radius:4px;font-family:monospace">arcadezone@upi</code> <button class="btn-secondary" onclick="copyUPI()" style="font-size:0.75rem;padding:4px 10px;margin-left:8px">Copy</button></div>
+<div style="margin-bottom:12px"><strong>Amount to Pay:</strong> <span id="paymentAmount" style="color:var(--neon-green);font-weight:700;font-size:1rem">₹0</span></div>
+<p style="color:var(--text-muted);font-size:0.85rem;margin:0">After payment, upload a screenshot of the transaction below.</p>
+</div>
+<div class="form-group">
+<label for="paymentScreenshot">Payment Screenshot *</label>
+<input type="file" id="paymentScreenshot" accept=".jpg,.jpeg,.png" required>
+<p class="file-hint" style="color:var(--text-muted);font-size:0.8rem;margin-top:6px">Accepted: JPG, JPEG, PNG (max 5MB)</p>
+</div>
+<div class="file-preview" id="screenshotPreview" style="display:none;margin-top:12px"></div>
+<div class="booking-nav"><button class="btn-secondary" onclick="prevStep(3)">← Back</button><button class="btn-primary" onclick="nextStep(5)" id="paymentNextBtn" disabled>Review Booking →</button></div>
+</div>
+<div class="booking-step" id="bookStep5">
+<h3 style="margin-bottom:16px;font-family:var(--font-body);font-weight:600">Booking Summary</h3>
+<div class="booking-summary" id="bookingSummary"></div>
+<div class="booking-nav" style="margin-top:20px"><button class="btn-secondary" onclick="prevStep(4)">← Back</button><button class="btn-primary" onclick="submitBooking()" style="background:linear-gradient(135deg,#25D366,#128C7E)">📱 Confirm & Send via WhatsApp</button></div>
+</div>
+<div class="booking-step" id="bookStepSuccess">
+<div class="booking-success">
+<div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+<h3>Booking Confirmed!</h3>
+<p>Your booking details have been sent to Arcade Zone via WhatsApp.</p>
+<p style="color:var(--neon-green);font-weight:600;margin-top:12px">The owner will confirm your slot shortly!</p>
+<button class="btn-primary" onclick="closeBooking()" style="margin-top:24px">Done ✓</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919005562077?text=Hi!%20I'd%20like%20to%20book%20a%20gaming%20session%20at%20Arcade%20Zone." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.528 5.867L.06 23.495l5.753-1.508A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82a9.78 9.78 0 0 1-5.445-1.472l-.39-.232-3.416.895.911-3.332-.255-.404A9.784 9.784 0 0 1 2.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z"/></svg>
+</a>
+
+<script src="app.js"></script>
+<script src="animations.js"></script>
+</body>
+</html>
